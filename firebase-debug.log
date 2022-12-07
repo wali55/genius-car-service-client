@@ -1,0 +1,38 @@
+[debug] [2022-12-07T06:16:35.933Z] ----------------------------------------------------------------------
+[debug] [2022-12-07T06:16:35.936Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Hp\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-12-07T06:16:35.937Z] CLI Version:   11.16.1
+[debug] [2022-12-07T06:16:35.937Z] Platform:      win32
+[debug] [2022-12-07T06:16:35.937Z] Node Version:  v14.19.0
+[debug] [2022-12-07T06:16:36.007Z] Time:          Wed Dec 07 2022 12:16:35 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-12-07T06:16:36.007Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-12-07T06:16:36.020Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2022-12-07T06:16:36.233Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-12-07T06:16:36.233Z] > authorizing via signed-in user (walisantunu@gmail.com)
+[debug] [2022-12-07T06:16:36.234Z] [iam] checking project genius-car-services-18c77 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-12-07T06:16:36.235Z] > refreshing access token with scopes: []
+[debug] [2022-12-07T06:16:36.236Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-12-07T06:16:36.237Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-12-07T06:16:36.595Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-12-07T06:16:36.596Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-12-07T06:16:36.668Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/genius-car-services-18c77:testIamPermissions [none]
+[debug] [2022-12-07T06:16:36.669Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/genius-car-services-18c77:testIamPermissions x-goog-quota-user=projects/genius-car-services-18c77
+[debug] [2022-12-07T06:16:36.669Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/genius-car-services-18c77:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-12-07T06:16:36.849Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2022-12-07T06:16:36.849Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2022-12-07T06:16:38.081Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/genius-car-services-18c77:testIamPermissions 200
+[debug] [2022-12-07T06:16:38.081Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/genius-car-services-18c77:testIamPermissions {}
+[debug] [2022-12-07T06:16:38.082Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project genius-car-services-18c77:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2022-12-07T06:16:38.083Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/genius-car-services-18c77 [none]
+[debug] [2022-12-07T06:16:38.748Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/genius-car-services-18c77 403
+[debug] [2022-12-07T06:16:38.748Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/genius-car-services-18c77 {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2022-12-07T06:16:38.749Z] HTTP Error: 403, The caller does not have permission
+[debug] [2022-12-07T06:16:38.982Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (C:\Users\Hp\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\Hp\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:288:77)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[error] 
+[error] Error: Failed to get Firebase project genius-car-services-18c77. Please make sure the project exists and your account has permission to access it.
